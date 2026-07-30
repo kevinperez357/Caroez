@@ -12,14 +12,44 @@
 }
 
 body {
-    background-color: var(--verde-fondo);
-    font-family: 'Poppins', sans-serif;
-    color: var(--texto-oscuro);
+    background-color:#7d0b59;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     min-height: 100vh;
-    padding: 20px 40px;
+    padding: 0;
+}
+
+.button, .menu-option, .categoria-btn {
+    background-color: #fcfaf7; /* Un blanco hueso muy sutil para suavizar */
+    color: #7d0b59; /* El texto interno lleva el morado del logo */
+    border: none;
+    padding: 15px 30px;
+    margin: 12px auto;
+    border-radius: 30px; /* Bordes redondeados premium */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    width: 85%;
+    max-width: 400px;
+}
+
+.precio, .duracion, .acento-marca {
+    color: #b1d235; /* Este es el verde lima sutil de las líneas de tu logo, ¡resaltará increíble sobre el morado! */
+    font-weight: bold;
+}
+
+.button:hover, .menu-option:hover, .categoria-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+    background-color: #ffffff;
 }
 
 .container {
@@ -52,11 +82,18 @@ body {
     display: block;
 }
 
-h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2rem;
-    letter-spacing: 4px;
-    font-weight: 600;
+h1, h2, h3 {
+    color: #ffffff;
+    text-align: center;
+}
+
+.card-servicio {
+    background-color: rgba(255, 255, 255, 0.07); /* Un fondo blanco ultra transparente para separar los servicios sin perder el fondo morado */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 15px auto;
+    max-width: 500px;
 }
 
 .subtitle {
