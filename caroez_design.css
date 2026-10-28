@@ -38,9 +38,9 @@ body {
 }
 
 .button, .menu-option, .categoria-btn {
-    background-color: #fcfaf7; /* Un blanco hueso muy sutil para suavizar */
-    color: #7d0b59; /* El texto interno lleva el morado del logo */
-    border: none;
+    background-color: var(--card-bg); /* Un blanco hueso muy sutil para suavizar */
+    color: var(--text-color); /* El texto interno lleva el morado del logo */
+    border: 1px solid var(--border-color);
     padding: 15px 30px;
     margin: 12px auto;
     border-radius: 30px; /* Bordes redondeados premium */
@@ -63,7 +63,7 @@ body {
 .button:hover, .menu-option:hover, .categoria-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
-    background-color: #ffffff;
+    border-color: var(--text-color);
 }
 
 .container {
