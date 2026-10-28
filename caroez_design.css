@@ -1,8 +1,21 @@
 :root {
-    --verde-fondo: #b2c4ad;
-    --beige-claro: #f4f1ea;
-    --texto-oscuro: #3d403a;
-    --blanco: #ffffff;
+    --bg-color: #fdfbf7;        /* Fondo cálido suave */
+    --card-bg: #ffffff;         /* Fondo de tarjetas */
+    --text-color: #2c2c2c;      /* Texto principal */
+    --text-muted: #6b705c;      /* Subtítulos */
+    --border-color: #eae5df;    /* Bordes y líneas */
+    --btn-bg: #1a1a1a;          /* Botones principales */
+    --btn-text: #ffffff;
+}
+
+body.dark-mode {
+    --bg-color: #121212;        /* Fondo negro elegante para la noche */
+    --card-bg: #1e1e1e;         /* Tarjetas en gris oscuro */
+    --text-color: #f3f3f3;      /* Texto blanco suave */
+    --text-muted: #a0a0a0;      /* Subtítulos más claros */
+    --border-color: #333333;    /* Bordes sutiles oscuros */
+    --btn-bg: #ffffff;          /* Botones blancos en modo oscuro */
+    --btn-text: #121212;
 }
 
 * {
@@ -12,10 +25,11 @@
 }
 
 body {
-    background-color:#7d0b59;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color); /* Un beige muy claro y elegante */
+    font-family: 'Cormorant Garamond', serif; /* Tipografía elegante y sofisticada */
     margin: 0;
-    color: #ffffff;
+    color: var(--text-color); /* Un gris oscuro para el texto, más suave que el negro puro */
+    transition: background-color 0.3s ease, color 0.3s ease;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -83,8 +97,19 @@ body {
 }
 
 h1, h2, h3 {
-    color: #ffffff;
+    color: var(--text-color);
     text-align: center;
+}
+
+.header-section img, 
+header img, 
+.logo-servicios {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover; /* Evita que la imagen se distorsione */
+    display: block;
+    margin: 0 auto 15px auto; /* Lo mantiene centrado */
 }
 
 .card-servicio {
@@ -184,7 +209,7 @@ h1, h2, h3 {
 
 .service-price {
     font-weight: 600;
-    color: #6d4c41; /* Tono café de tu imagen original */
+    color: var(--text-color); /* Tono café de tu imagen original */
 }
 
 .service-tagline {
@@ -213,7 +238,7 @@ h1, h2, h3 {
     color: var(--texto-oscuro);
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
-
+H1
 .service-header {
     display: flex;
     justify-content: space-between;
@@ -234,7 +259,7 @@ h1, h2, h3 {
     justify-content: center;
     text-align: center;
     background-color: var(--verde-fondo); /* Asegúrate de tener esta variable definida */
-    color: white;
+    color: var(--text-color);
     text-decoration: none;
     padding: 12px 20px;
     margin-top: 15px;
@@ -292,4 +317,169 @@ h1, h2, h3 {
     padding-bottom: 60px;
     display: flex;
     justify-content: center;
+}
+
+/* --- Estilos para la sección de Citas --- */
+.booking-container {
+    width: 100%;
+    max-width: 480px;
+    padding: 30px;
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    box-sizing: border-box;
+}
+
+.form-group {
+    margin-bottom: 18px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #333333; /* Gris oscuro para los labels */
+}
+
+.form-group input, 
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.form-group input, 
+.form-group select,
+.form-group textarea {
+    font-family: 'Cormorant Garamond', serif; /* O la fuente principal que use tu proyecto */
+    font-size: 16px; /* Asegura un tamaño cómodo de lectura */
+    color: var(--text-color);
+}
+
+.btn-confirmar {
+    width: 100%;
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    font-weight: bold;
+    padding: 14px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-confirmar:hover {
+    background-color: #333333;
+    transform: translateY(-2px);
+}
+
+.main-booking-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+    box-sizing: border-box;
+}
+
+.header-section {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.logo-citas {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.header-section h1 {
+    font-size: 28px;
+    color: var(--text-color);
+    margin: 5px 0;
+}
+
+.sub-title-atelier {
+    color: #6b705c; /* Un tono neutro elegante acorde al lujo silencioso */
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.services-category-title {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+    margin: 18px 0 10px 0;
+}
+
+.service-options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 10px;
+}
+
+.service-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 12px 14px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.25s ease;
+    user-select: none;
+}
+
+.service-card:hover {
+    border-color: var(--text-color);
+    transform: translateY(-2px);
+}
+
+.service-card.selected {
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    border-color: var(--btn-bg);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.service-card.selected .service-name,
+.service-card.selected .service-price {
+    color: var(--btn-text) !important;
+}
+
+.service-name {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: var(--text-color);
+    line-height: 1.2;
+}
+
+.service-price {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+#mensaje-status {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 15px;
 }

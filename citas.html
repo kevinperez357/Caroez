@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Cita | Maison Caroez</title>
+    <link rel="icon" type="image/jpg" href="logo3.jpg">
+    <link rel="stylesheet" href="caroez_design.css">
+</head>
+<body>
+
+    <button id="darkModeToggle" style="position: fixed; top: 20px; right: 20px; background: none; border: 1px solid var(--border-color); border-radius: 50%; width: 40px; height: 40px; cursor: pointer; font-size: 18px; display: flex; align-items: center; justify-content: center; z-index: 1000;">
+        <span id="darkModeIcon">🌙</span>
+    </button>
+
+    <div class="main-booking-wrapper">
+
+
+        <div class="header-section">
+            <a href="index.html">
+                <img src="logo3.jpg" alt="Caroez Logo" class="logo-citas">
+            </a>
+            <h1>Reserva tu Cita</h1>
+            <p class="sub-title-atelier">Maison | Caroez</p>
+    </div>
+
+    <div class="booking-container">
+        <form id="appointmentForm">
+            <div class="form-group">
+                <label for="nombre">Nombre Completo:</label>
+                <input type="text" id="nombre" required placeholder="Ej. Ana García">
+            </div>
+
+            <div class="form-group">
+                <label for="telefono">WhatsApp / Teléfono:</label>
+                <input type="tel" id="telefono" required placeholder="3312345678">
+            </div>
+
+            <div class="form-group">
+                <label class="form-label-custom">Selecciona tu tratamiento:</label>
+                <input type="hidden" id="servicio" name="servicio" required>
+                
+                <div class="services-category-title">Faciales</div>
+                <div class="service-options-grid">
+                    <div class="service-card" data-value="Clear Skin ($650)">
+                        <span class="service-name">Clear Skin</span>
+                        <span class="service-price">$650</span>
+                    </div>
+                    <div class="service-card" data-value="Aura Skin ($850)">
+                        <span class="service-name">Aura Skin</span>
+                        <span class="service-price">$850</span>
+                    </div>
+                    <div class="service-card" data-value="Velvet Skin ($1,250)">
+                        <span class="service-name">Velvet Skin</span>
+                        <span class="service-price">$1,250</span>
+                    </div>
+                    <div class="service-card" data-value="Sculpt Lift ($1,450)">
+                        <span class="service-name">Sculpt Lift</span>
+                        <span class="service-price">$1,450</span>
+                    </div>
+                    <div class="service-card" data-value="Timeless Lift ($2,220)">
+                        <span class="service-name">Timeless Lift</span>
+                        <span class="service-price">$2,220</span>
+                    </div>
+                </div>
+
+                <div class="services-category-title">Corporales</div>
+                <div class="service-options-grid">
+                    <div class="service-card" data-value="Skin Balance Body ($400)">
+                        <span class="service-name">Skin Balance Body</span>
+                        <span class="service-price">$400</span>
+                    </div>
+                    <div class="service-card" data-value="Skin Sculpt Body ($550)">
+                        <span class="service-name">Skin Sculpt Body</span>
+                        <span class="service-price">$550</span>
+                    </div>
+                    <div class="service-card" data-value="Skin Detox Body ($850)">
+                        <span class="service-name">Skin Detox Body</span>
+                        <span class="service-price">$850</span>
+                    </div>
+                </div>
+
+                <div class="services-category-title">Consultoría</div>
+                <div class="service-options-grid">
+                    <div class="service-card" data-value="Essential Image Reset ($900)">
+                        <span class="service-name">Essential Image Reset</span>
+                        <span class="service-price">$900</span>
+                    </div>
+                    <div class="service-card" data-value="Signature Image Glow Up ($1,800)">
+                        <span class="service-name">Signature Image Glow Up</span>
+                        <span class="service-price">$1,800</span>
+                    </div>
+                    <div class="service-card" data-value="Image Evolution Program ($3,899)">
+                        <span class="service-name">Image Evolution Program</span>
+                        <span class="service-price">$3,899</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="fecha">Fecha preferida:</label>
+                <input type="date" id="fecha" required>
+            </div>
+
+            <div class="form-group">
+                <label for="hora">Horario:</label>
+                <select id="hora" required>
+                    <option value="">Primero selecciona una fecha</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn-confirmar">Confirmar Cita</button>
+        </form>
+
+        <div id="mensaje-status" style="text-align: center;"></div>
+    </div>
+
+    <!-- Enlace al archivo de JavaScript separado -->
+    <script type="module" src="citas.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
